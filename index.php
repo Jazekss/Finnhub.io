@@ -34,12 +34,12 @@ $symbolsAll = json_decode(file_get_contents('symbols.json'));
       <div class="valName"><?php echo $_GET["name"]; ?><span class="smallCorner"><strong><?php echo $quote['c']; ?></strong></span></div>
 	    <?php if ($quote['dp'] < 0) { ?>
         <div class="colorTextRed"><b class="sign">⪗ </b>
-          <span class="span14px"><?php echo number_format($quote['dp'], 2, '.', ''); ?></span>
+          <span class="span14px"><?php echo number_format($quote['dp'], 2, '.', ''); ?>%</span>
           <span class="smallBottom">(<?php echo $quote['o']; ?>>)</span>
         </div>
 	    <?php } else { ?>
         <div class="colorTextGreen"><b class="sign">⪀ </b>
-          <span class="span14px"> <?php echo number_format($quote['dp'], 2, '.', ''); ?></span>
+          <span class="span14px"> <?php echo number_format($quote['dp'], 2, '.', ''); ?>%</span>
           <span class="smallBottom">(<?php echo $quote['o']; ?>>)</span>
         </div>
 	    <?php } ?>
@@ -71,12 +71,12 @@ $symbolsAll = json_decode(file_get_contents('symbols.json'));
         </div>
 				<?php if ($quote[$i]['dp'] < 0) { ?>
           <div class="colorTextRed"><b class="sign">⪗ </b>
-            <span class="span14px"><?php echo number_format($quote[$i]['dp'], 2, '.', ''); ?></span>
+            <span class="span14px"><?php echo number_format($quote[$i]['dp'], 2, '.', ''); ?>%</span>
             <span class="smallBottom">(<?php echo $quote[$i]['o']; ?>>)</span>
           </div>
 				<?php } else { ?>
           <div class="colorTextGreen"><b class="sign">⪀ </b>
-            <span class="span14px"><?php echo number_format($quote[$i]['dp'], 2, '.', ''); ?></span>
+            <span class="span14px"><?php echo number_format($quote[$i]['dp'], 2, '.', ''); ?>%</span>
             <span class="smallBottom">(<?php echo $quote[$i]['o']; ?>>)</span>
           </div>
 				<?php } ?>
